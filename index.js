@@ -8,13 +8,13 @@ var bodyParser = require('body-parser');
 var _ = require('lodash');
 require('dotenv').load();
 
-/*
+//*
 var mongoURL = process.env.MONGODB_URI;
 var GOOGLE_MAP_KEY = process.env.GOOGLE_MAP_KEY;
 var googleMapsClient = require('@google/maps').createClient({
   key: GOOGLE_MAP_KEY
 });
-*/
+//*/
 // 配置 stormpath 
 app.use(stormpath.init(app, {
     website: true,
@@ -82,10 +82,10 @@ app.get('/', stormpath.getUser, function(request, response) {
 		response.render('pages/index', { user :"_null_@"+request.ip  });
 	}
 });
-/*
+//*
 app.use('/search/:search',  function(request, response) { // 根据地名返回酒吧数据json
   googleMapsClient.places({
-    query:"酒吧"+request.body.search,
+    query:"成都酒吧+"+request.body.search,
     language:'cn',
     type:"bar"
   },function(err, res) {
@@ -94,10 +94,11 @@ app.use('/search/:search',  function(request, response) { // 根据地名返回�
       console.log(res.json.results);
     }else{
       console.log("ERR!"+err);
+      response.json(err);
     }
   })
 });
-*/
+//*/
 app.post('/join',function(request, response){
 
 });
