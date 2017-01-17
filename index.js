@@ -96,3 +96,13 @@ app.use('/search/:search',  function(request, response) { // 根据地名返回�
     }
   })
 });
+
+app.post('/join',function(request, response){
+
+});
+
+app.on('stormpath.ready', function() {
+  app.listen(app.get('port'), function() {
+    console.log('程序监听端口为', app.get('port'));
+  });
+});
