@@ -8,12 +8,13 @@ var bodyParser = require('body-parser');
 var _ = require('lodash');
 require('dotenv').load();
 
+/*
 var mongoURL = process.env.MONGODB_URI;
 var GOOGLE_MAP_KEY = process.env.GOOGLE_MAP_KEY;
 var googleMapsClient = require('@google/maps').createClient({
   key: GOOGLE_MAP_KEY
 });
-
+*/
 // 配置 stormpath 
 app.use(stormpath.init(app, {
     website: true,
