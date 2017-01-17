@@ -81,7 +81,7 @@ app.get('/', stormpath.getUser, function(request, response) {
 		response.render('pages/index', { user :"_null_@"+request.ip  });
 	}
 });
-
+/*
 app.use('/search/:search',  function(request, response) { // 根据地名返回酒吧数据json
   googleMapsClient.places({
     query:"酒吧"+request.body.search,
@@ -96,7 +96,7 @@ app.use('/search/:search',  function(request, response) { // 根据地名返回�
     }
   })
 });
-
+*/
 app.post('/join',function(request, response){
 
 });
