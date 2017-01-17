@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+  <% include ../partials/nav.ejs %>
+  <br>
+
+  <!-- Begin Container -->
+<div class="container" id="pois">
+</div>
+  <!-- /.container -->
+  <% include ../partials/footer.ejs %>
+    <script>
+  $.ajax({
+    type: 'GET',
+    url: '/search',
+    success: function(data) {
+        for(var i = 0; i < data.poi.length; i++){
+          var html = '<div class="row poiItem">';
+         // html += '<a href="/singlePoll?id='+data.poi[i]._id+'">';
+          html += data.poi[i].question;
+          html += '</a>';
+          html += '</div';
+          $('#pois').append(html);
+        }
+    }
+  });
+  </script>
+</body>
+</html>
