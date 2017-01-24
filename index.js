@@ -105,12 +105,10 @@ app.on('stormpath.ready', function() {
 
 //* 设置是否到某个酒吧
 app.get('/updatebar/:id',stormpath.loginRequired,function(request, response){ // 更新参加信息
-  console.log("x0:"+request.params.id)
   MongoClient.connect(mongoURL, function(err, db) {
     assert.equal(null, err);
     updatejoin(db, function(rt) {
         db.close();
-        console.log("x1:"+JSON.stringify(rt))
         response.json(rt);
     }, {barID:request.params.id,username:request.user.email});
   });
@@ -163,17 +161,12 @@ var updatejoin = function(db, callback, joinData) {
       if (doc != null) {
          flag=false;
          rt[joinData.barID]=doc.users;  //获取旧的情况
-         console.log("0:"+JSON.stringify(rt))
       }
-
-   console.log("0:"+JSON.stringify(rt))
    var s=_.indexOf(rt[joinData.barID], joinData.username)
    if( s> -1 ){ //已经有那个用户
      rt[joinData.barID].splice(s,1);
-     console.log("1:"+JSON.stringify(rt))
    }else{ // 没有用户
      rt[joinData.barID].push(joinData.username)
-     console.log("2:"+JSON.stringify(rt))
    }
    if(flag){ // 插入
       db.collection('nightlife').insertOne( {
