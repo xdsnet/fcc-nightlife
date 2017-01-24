@@ -29,6 +29,7 @@
     "express": "^4.14.0",
     "express-stormpath": "^3.1.8",
     "ladash": "^1.2.0",
-    "mongodb": "^2.2.20"
+    "mongodb": "^2.2.20",
+    "node-foursquare-venues": "^1.1.0"
   }
 }

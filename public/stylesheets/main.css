@@ -1,6 +1,8 @@
 body {
   padding-top: 50px;
-  background-color: #eee;
+  background-color: #cc5757;
+  color:#66f;
+  font-weight: bold;
 }
 .starter-template {
   padding: 40px 15px;
@@ -28,12 +30,44 @@ body {
   /* 5 大屏幕为5栏 */
   .grid-sizer { width: 20%; }
   .grid-item { 
-  width: 20%; 
-  padding: 5px;
+    width: 20%; 
+    padding: 5px;
+  }
 }
+.mysearch{
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #cc5757;
+ /* border-radius: 25px;*/
+  text-align: center;
+  color:#99f;
+}
+.bt-join{
+
+} 
+
+.bt-join.bt-disabled, .bt-join[bt-disabled], fieldset[bt-disabled]  {
+    pointer-events: none;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
-.pollItem {
+.sss{
+  width:60px;
+  height:40px;
+  font-size: 14px;
+}
+.searchinput{
+  width:400px;
+  height:40px;
+}
+.mylabel{
+  color:#70c;
+}
+.empt{
+  height: 60px;
+}
+.bars {
   margin-bottom: 5px;
   padding: 5px;
   background-color: #CCC;
@@ -41,18 +75,25 @@ body {
   text-align: center;
 }
 
-.pollItem:hover { 
-    background-color: #DDD;
+
+.barname{
+  color:#e0e;
+  font-size:18px;
 }
 
-#pollData{
-    text-align: center;
+.baraddress {
+  color:#273;
+  font-size:16px;
 }
 
-.powerby {
-    color:#eee;
+.barjion{
+  color:#e00;
+  font-size:18px;
 }
 
+.powerby{
+  color:#ccf;
+}
 .powera {
   color: #66f;
 }
