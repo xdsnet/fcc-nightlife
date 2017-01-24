@@ -1,0 +1,103 @@
+body {
+  padding-top: 50px;
+  background-color: #cc5757;
+  color:#66f;
+  font-weight: bold;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+/* 5栏 */
+.grid-item { 
+  width: 33.333%; 
+  padding: 5px;
+}
+/* 2 栏 */
+.grid-item--width2 { width: 40%; padding: 5px;}
+
+.pin-title {background-color: #fff;}
+
+.centerBlock {
+                display: table;
+                margin: 0 auto;
+            }
+/* 3 栏 */
+.grid-sizer { width: 33.333%; }
+
+@media screen and (min-width: 768px) {
+  /* 5 大屏幕为5栏 */
+  .grid-sizer { width: 20%; }
+  .grid-item { 
+    width: 20%; 
+    padding: 5px;
+  }
+}
+.mysearch{
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #cc5757;
+ /* border-radius: 25px;*/
+  text-align: center;
+  color:#99f;
+}
+.bt-join{
+
+} 
+
+.bt-join.bt-disabled, .bt-join[bt-disabled], fieldset[bt-disabled]  {
+    pointer-events: none;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.sss{
+  width:60px;
+  height:40px;
+  font-size: 14px;
+}
+.searchinput{
+  width:400px;
+  height:40px;
+}
+.mylabel{
+  color:#70c;
+}
+.empt{
+  height: 60px;
+}
+.bars {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #CCC;
+  border-radius: 25px;
+  text-align: center;
+}
+
+
+.barname{
+  color:#e0e;
+  font-size:18px;
+}
+
+.baraddress {
+  color:#273;
+  font-size:16px;
+}
+
+.barjion{
+  color:#e00;
+  font-size:18px;
+}
+
+.powerby{
+  color:#ccf;
+}
+.powera {
+  color: #66f;
+}
+
+.powera:hover {
+  color:#ccf;
+}

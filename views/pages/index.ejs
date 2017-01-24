@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../partials/header.ejs %>
+  <script src="/js/getplace.js"></script>
+</head>
+
+<body>
+  <% include ../partials/nav.ejs %>
+  <br>
+
+  <!-- Begin Container -->
+  <div class="container">
+      <div class="mysearch">
+          要去的大致位置:<input type="text" class="searchinput" autocomplete="off" id="mysearch" name="mysearch" placeholder="成都"  ><button id="sss" class="sss" type="button" onclick="search();"> 搜 索 </button>
+      </div>
+  </div>
+<div class="container" id="pois">
+</div>
+  <!-- /.container -->
+  <!--一段空白，方便结果展示全面-->
+  <div class="empt">
+  
+  </div>
+  <% include ../partials/footer.ejs %>
+
+  <script>
+$(document).ready(function(){
+  if (sessionStorage.lastsearch)
+  {
+      $('#mysearch').val(sessionStorage.lastsearch);
+      showBars("");
+      showJoin("");
+  }
+});
+  </script>
+</body>
+</html>

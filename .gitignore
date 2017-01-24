@@ -7,3 +7,5 @@ mlab.md
 *.tmp
 todo.md
 test.js
+*.crt
+*.pem
